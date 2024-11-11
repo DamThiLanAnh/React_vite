@@ -3,8 +3,22 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+//arrow function: () => {}
+
+const App = () => {
   const [count, setCount] = useState(0)
+
+
+  // function myFunction() {
+  //   console.log(">>> my function")
+  // }
+
+
+  const myFunction = () => {
+    console.log(">>> my function")
+  }
+
+  myFunction();
 
   return (
     <>
