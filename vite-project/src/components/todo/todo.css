@@ -1,0 +1,49 @@
+.container {
+    font-size: 36px;
+    font-weight: bold;
+    /* color: #f2711c; */
+    /* Màu chữ gradient */
+    background: -webkit-linear-gradient(left, #d80808, #d5f21c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.add {
+    text-align: center;
+}
+
+.input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 15px;
+    position: relative;
+}
+
+.add-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.todo-list {
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text {
+    /* text-align: center; */
+}
