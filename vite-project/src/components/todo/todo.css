@@ -1,49 +1,53 @@
-.container {
-    font-size: 36px;
-    font-weight: bold;
-    /* color: #f2711c; */
-    /* Màu chữ gradient */
-    background: -webkit-linear-gradient(left, #d80808, #d5f21c);
+.container{
+    margin-top: 20px;
+}
+.header h1 {
+    background: linear-gradient(to right, red, yellow);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 50px;
+    color: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.add{
     text-align: center;
 }
-
-.add {
-    text-align: center;
-}
-
-.input {
-    width: 250px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 20px;
-    height: 15px;
-    position: relative;
-}
-
-.add-btn {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.todo-list {
-    margin-top: 20px;
+.input{
+    width: 300px;
+    height: 30px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    padding: 5px;
+    margin-right: 10px;
+}
+.add-btn{
+    background-color: #4CAF50; /* Màu nền xanh lá cây */
+    border: none;             /* Không có viền */
+    color: white;             /* Màu chữ trắng */
+    padding: 10px 20px;       /* Khoảng cách bên trong nút */
+    text-align: center;       /* Căn giữa văn bản */
+    text-decoration: none;    /* Không có gạch chân */
+    display: inline-block;    /* Hiển thị kiểu block nội tuyến */
+    font-size: 16px;          /* Cỡ chữ */
+    margin: 4px 2px;          /* Khoảng cách ngoài */
+    cursor: pointer;          /* Con trỏ chuột khi hover */
+    border-radius: 8px;       /* Bo góc nút */
 }
 
-.text {
-    /* text-align: center; */
+.list {
+    width: 80%;               /* Chiều rộng là 80% (bạn có thể điều chỉnh giá trị này) */
+    max-width: 600px;         /* Chiều rộng tối đa là 600px */
+    height: 400px;            /* Chiều cao là 400px (bạn có thể điều chỉnh giá trị này) */
+    margin: 20px auto;        /* Căn giữa phần tử và đặt khoảng cách trên dưới 20px */
+    padding: 0;               /* Không có khoảng cách bên trong */
+    list-style-type: none;    /* Bỏ dấu đầu dòng */
+    background-color: #f3f3f3; /* Màu nền nhẹ */
+    border: 1px solid #ccc;   /* Viền mảnh */
+    border-radius: 5px;       /* Bo góc */
+    overflow-y: scroll;       /* Hiển thị scroll nếu nội dung vượt quá chiều cao */
+}
+
+.list > div {
+    padding: 10px;            /* Khoảng cách bên trong các mục */
 }
