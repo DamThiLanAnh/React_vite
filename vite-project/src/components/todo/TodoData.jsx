@@ -13,6 +13,10 @@ const TodoData = (props) => {
             <div>Learn Redux</div>
             <div>Learn React Hooks</div>
             <div>Learn React Context</div>
+            <div>
+                {/* eslint-disable-next-line react/prop-types */}
+                {JSON.stringify(props.todoList)}
+            </div>
         </div>
     )
 }
