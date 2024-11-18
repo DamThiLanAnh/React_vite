@@ -4,10 +4,15 @@ import {useState} from "react";
 
 const TodoInput = (props) => {
     // Sự kiện onclick
+    const [valueInput, setValueInput] = useState('lan anh')
+
     // eslint-disable-next-line react/prop-types
     const { addNewTodo } = props;
+    console.log(addNewTodo)
 
-
+    const handleClick = () => {
+        addNewTodo(valueInput)
+    }
 
     // sự kiện onChange lay ra dc gia tri
     const handleOnChange = (name) => {
@@ -17,15 +22,13 @@ const TodoInput = (props) => {
     //useState hook (getter/setter)
     //const valueInput = "lan anh"
 
-    const [valueInput, setValueInput] = useState('lan anh')
-
-        
 
     return (
         <div className='add'>
-            <input type="text" className="input" placeholder='Enter your task'
-                   onChange={
-                (name) => {handleOnChange(name.target.value)}
+            <input type="text"
+                   className="input"
+                   placeholder='Enter your task'
+                   onChange={(event) => {handleOnChange(event.target.value)}
             }
             />
             <button className='add-btn' onClick={handleClick}>Add</button>
