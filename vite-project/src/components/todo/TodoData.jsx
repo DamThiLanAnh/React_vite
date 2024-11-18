@@ -1,24 +1,33 @@
 import './todo.css'
+import PropTypes from "prop-types";
+
 
 const TodoData = (props) => {
-    console.log(">>> check props: ", props)
+    const { todoList} = props;
+    console.log(">>> check props: ", todoList)
 
     return (
         <div className='list'>
-            {/* eslint-disable-next-line react/prop-types */}
-            <div>My name is {props.name}</div>
-            <div>Learn React</div>
-            <div>Learn Vite</div>
-            <div>Learn React Router</div>
-            <div>Learn Redux</div>
-            <div>Learn React Hooks</div>
-            <div>Learn React Context</div>
+            {todoList.map((item, index) => {
+                console.log(">>> check map: ", item, index)
+                return (
+                    // eslint-disable-next-line react/jsx-key
+                    <div className='button_delete'>
+                        <div>{item.name}</div>
+                        <button>Delete</button>
+                    </div>
+                )
+            })}
             <div>
-                {/* eslint-disable-next-line react/prop-types */}
                 {JSON.stringify(props.todoList)}
             </div>
         </div>
     )
+}
+
+TodoData.prototype = {
+    todoList: PropTypes.array.isRequired,
+    name: PropTypes.string.isRequired,
 }
 
 export default TodoData

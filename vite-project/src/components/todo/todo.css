@@ -51,3 +51,26 @@
 .list > div {
     padding: 10px;            /* Khoảng cách bên trong các mục */
 }
+
+.button_delete {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button_delete button {
+    color: white;
+    background-color: #CB1414FF;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;        /* Adding padding for better touch targets */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for the effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+}
+
+.button_delete button:hover {
+    background-color: #ff4c4c; /* Slightly lighter red on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}

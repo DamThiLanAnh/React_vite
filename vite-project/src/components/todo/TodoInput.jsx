@@ -6,12 +6,12 @@ const TodoInput = (props) => {
     // Sự kiện onclick
     const [valueInput, setValueInput] = useState('lan anh')
 
-    // eslint-disable-next-line react/prop-types
     const { addNewTodo } = props;
     console.log(addNewTodo)
 
     const handleClick = () => {
         addNewTodo(valueInput)
+        setValueInput("")
     }
 
     // sự kiện onChange lay ra dc gia tri
@@ -25,11 +25,9 @@ const TodoInput = (props) => {
 
     return (
         <div className='add'>
-            <input type="text"
-                   className="input"
-                   placeholder='Enter your task'
-                   onChange={(event) => {handleOnChange(event.target.value)}
-            }
+            <input type="text" className="input" placeholder='Enter your task'
+                   onChange={(event) => {handleOnChange(event.target.value)}}
+                       value={valueInput}
             />
             <button className='add-btn' onClick={handleClick}>Add</button>
 
