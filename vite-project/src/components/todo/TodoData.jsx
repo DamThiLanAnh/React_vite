@@ -3,18 +3,22 @@ import PropTypes from "prop-types";
 
 
 const TodoData = (props) => {
-    const { todoList} = props;
+    const {todoList, deleteTodo} = props;
     console.log(">>> check props: ", todoList)
-
+    const handleOnClick = (id) => {
+        deleteTodo(id)
+    }
     return (
         <div className='list'>
             {todoList.map((item, index) => {
                 console.log(">>> check map: ", item, index)
                 return (
-                    // eslint-disable-next-line react/jsx-key
-                    <div className='button_delete'>
+                    <div className='button_delete' key={item.id}>
                         <div>{item.name}</div>
-                        <button>Delete</button>
+                        <button style={{cursor: "pointer"}}
+                                onClick={()=> handleOnClick(item.id)}
+                        >Delete
+                        </button>
                     </div>
                 )
             })}
